@@ -10,5 +10,5 @@ class EmailClient:
         self.host = host
         self.prefix = prefix
 
-    def get(self, endpoint, args=None):
-        return self._s.get(self.host + self.prefix + endpoint, params=args)
+    def get(self, endpoint, **kwargs):
+        return self._s.get(self.host + self.prefix + endpoint, **kwargs)
